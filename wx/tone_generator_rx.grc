@@ -156,11 +156,7 @@
     </param>
   </block>
   <block>
-    <key>blks2_tcp_source</key>
-    <param>
-      <key>addr</key>
-      <value>127.0.0.1</value>
-    </param>
+    <key>blocks_udp_source</key>
     <param>
       <key>alias</key>
       <value></value>
@@ -179,7 +175,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(232, 152)</value>
+      <value>(184, 120)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -187,7 +183,11 @@
     </param>
     <param>
       <key>id</key>
-      <value>blks2_tcp_source_0</value>
+      <value>blocks_udp_source_0</value>
+    </param>
+    <param>
+      <key>ipaddr</key>
+      <value>127.0.0.1</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -198,12 +198,16 @@
       <value>0</value>
     </param>
     <param>
-      <key>server</key>
+      <key>eof</key>
       <value>True</value>
     </param>
     <param>
       <key>type</key>
       <value>float</value>
+    </param>
+    <param>
+      <key>psize</key>
+      <value>1472</value>
     </param>
     <param>
       <key>port</key>
@@ -302,13 +306,13 @@
     </param>
   </block>
   <connection>
-    <source_block_id>blks2_tcp_source_0</source_block_id>
+    <source_block_id>blocks_udp_source_0</source_block_id>
     <sink_block_id>audio_sink_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>blks2_tcp_source_0</source_block_id>
+    <source_block_id>blocks_udp_source_0</source_block_id>
     <sink_block_id>wxgui_scopesink2_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>

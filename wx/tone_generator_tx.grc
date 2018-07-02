@@ -231,11 +231,7 @@
     </param>
   </block>
   <block>
-    <key>blks2_tcp_sink</key>
-    <param>
-      <key>addr</key>
-      <value>127.0.0.1</value>
-    </param>
+    <key>blocks_udp_sink</key>
     <param>
       <key>alias</key>
       <value></value>
@@ -249,12 +245,20 @@
       <value></value>
     </param>
     <param>
+      <key>ipaddr</key>
+      <value>127.0.0.1</value>
+    </param>
+    <param>
+      <key>port</key>
+      <value>12345</value>
+    </param>
+    <param>
       <key>_enabled</key>
       <value>True</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(432, 168)</value>
+      <value>(456, 160)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -262,19 +266,19 @@
     </param>
     <param>
       <key>id</key>
-      <value>blks2_tcp_sink_0</value>
+      <value>blocks_udp_sink_0</value>
     </param>
     <param>
       <key>type</key>
       <value>float</value>
     </param>
     <param>
-      <key>server</key>
-      <value>False</value>
+      <key>psize</key>
+      <value>1472</value>
     </param>
     <param>
-      <key>port</key>
-      <value>12345</value>
+      <key>eof</key>
+      <value>True</value>
     </param>
     <param>
       <key>vlen</key>
@@ -283,7 +287,7 @@
   </block>
   <connection>
     <source_block_id>analog_sig_source_x_0</source_block_id>
-    <sink_block_id>blks2_tcp_sink_0</sink_block_id>
+    <sink_block_id>blocks_udp_sink_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
