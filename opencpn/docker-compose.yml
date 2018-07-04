@@ -1,0 +1,13 @@
+version: "2"
+
+services:
+    opencpn:
+        build: .
+        container_name: opencpn
+        environment:
+            DISPLAY: unix${DISPLAY}
+        ports:
+            - "10110:10110/udp"
+        volumes:
+            - "/tmp/.X11-unix/:/tmp/.X11-unix/"
+            - "~/.Xauthority:/root/.xAuthority"
