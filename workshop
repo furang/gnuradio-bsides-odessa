@@ -1,0 +1,51 @@
+GNURadio
+
+apt-get install gnuradio 
+
+git clone git@github.com:furang/gnuradio-bsides-odessa.git
+
+
+ADS-B
+git clone https://github.com/antirez/dump1090.git
+cd dump1090
+make
+./dump1090 --net --interactive
+
+open in browser localhost:8080
+
+AIS
+
+apt-get install librtlsdr-dev libusb-dev kalibrate-rtl rtl_test
+
+git clone https://github.com/dgiardini/rtl-ais 
+cd rtl-ais
+make
+
+rtl_test -p 10 # define ~ppm
+
+./rtl_ais -n -p <ppm> -h 127.0.0.1 -P 10110
+
+.....
+
+curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add -
+echo 'deb https://download.docker.com/linux/debian stretch stable' > /etc/apt/sources.list.d/docker.list
+
+apt-get update
+
+apt-get remove docker docker-engine docker.io
+
+dpkg --add-architecture i386
+
+apt-get update
+
+apt-get install docker-ce docker-compose
+
+cd opencpn
+docker-compose up -d
+
+Settings -> Connections -> Add connection -> Network -> UDP -> Address 127.0.0.1 -> Port 10110
+
+GSM Sniff
+
+apt-get install wireshark
+https://github.com/ptrkrysik/gr-gsm/wiki/Manual-compilation-and-installation
